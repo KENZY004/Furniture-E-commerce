@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+
+
+/* Hero Section */
+.hero {
+  display: flex;
+  height: 60vh;
+}
+
+/* Left side */
+.hero-left {
+  width: 50%;
+  background-color: #e35b2b;
+  display: flex;
+  align-items: center;
+  padding-left: 80px;
+}
+
+.hero-left h1 {
+  color: white;
+  font-size: 60px;
+  line-height: 1.1;
+}
+
+/* Right side */
+.hero-right {
+  width: 50%;
+}
+
+.hero-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
