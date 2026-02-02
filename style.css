@@ -63,3 +63,24 @@
   object-fit: cover;
 }
 
+/* About Section */
+.about {
+  display: flex;
+  padding: 60px;
+  background-color: #f6f1e8;
+}
+
+.about-left {
+  width: 40%;
+}
+
+.about-left h2 {
+  font-size: 26px;
+}
+
+.about-right {
+  width: 60%;
+  padding-left: 40px;
+  font-size: 14px;
+  line-height: 1.7;
+}
