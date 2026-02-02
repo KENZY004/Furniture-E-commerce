@@ -5,7 +5,31 @@
   font-family: Arial, sans-serif;
 }
 
+ /* Navbar */
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  z-index: 10;
+}
 
+.navbar nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.logo{
+  font-size: 20px;
+  font-weight: 700;
+}
 
 /* Hero Section */
 .hero {
