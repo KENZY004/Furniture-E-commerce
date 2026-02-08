@@ -31,17 +31,15 @@
           </svg>
         </button>
         <div class="search-dropdown" id="searchDropdown">
-          <input type="text" placeholder="Search products..." class="search-input">
+          <input type="text" placeholder="Search products..." class="search-input" id="searchInput">
+          <div class="search-results" id="searchResults"></div>
         </div>
       </div>
 
-      <!-- User Account Icon -->
-      <button class="icon-btn">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-          <circle cx="12" cy="7" r="4"></circle>
-        </svg>
-      </button>
+      <!-- User Account / Auth Links -->
+      <div id="authContainer">
+        <!-- Will be populated by script.js based on login status -->
+      </div>
 
       <!-- Shopping Cart Icon -->
       <button class="icon-btn cart-btn">

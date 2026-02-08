@@ -1,4 +1,56 @@
-// State
+// NordForm E-commerce - Main Script
+// Product Database
+const allProducts = [
+  // Soft Seating
+  { name: "Modern Velvet Sofa", price: 1299, image: "assets/product1.jpg", category: "Soft Seating" },
+  { name: "Leather Lounge Sofa", price: 1599, image: "assets/product2.jpg", category: "Soft Seating" },
+  { name: "L-Shape Sectional", price: 2199, image: "assets/product3.jpg", category: "Soft Seating" },
+  { name: "Chesterfield Sofa", price: 1899, image: "assets/soft_seating.jpg", category: "Soft Seating" },
+  { name: "Mid-Century Modern Sofa", price: 1449, image: "assets/product1.jpg", category: "Soft Seating" },
+  { name: "Modular Sofa System", price: 2499, image: "assets/product2.jpg", category: "Soft Seating" },
+
+  // Seating
+  { name: "Modern Armchair", price: 899, image: "assets/chair.jpg", category: "Seating" },
+  { name: "Dining Chair", price: 299, image: "assets/chair.jpg", category: "Seating" },
+  { name: "Lounge Chair", price: 1299, image: "assets/chair.jpg", category: "Seating" },
+  { name: "Ergonomic Office Chair", price: 549, image: "assets/chair.jpg", category: "Seating" },
+  { name: "Velvet Accent Chair", price: 699, image: "assets/chair.jpg", category: "Seating" },
+  { name: "Scandinavian Rocking Chair", price: 849, image: "assets/chair.jpg", category: "Seating" },
+
+  // Tables
+  { name: "Dining Table", price: 1299, image: "assets/table.jpg", category: "Tables" },
+  { name: "Coffee Table", price: 499, image: "assets/table.jpg", category: "Tables" },
+  { name: "Round Side Table", price: 249, image: "assets/table.jpg", category: "Tables" },
+  { name: "Console Table", price: 699, image: "assets/table.jpg", category: "Tables" },
+  { name: "Modern Writing Desk", price: 899, image: "assets/table.jpg", category: "Tables" },
+  { name: "Nesting Tables Set", price: 399, image: "assets/table.jpg", category: "Tables" },
+
+  // Storage
+  { name: "Bookshelf", price: 799, image: "assets/storage.jpg", category: "Storage" },
+  { name: "Wardrobe", price: 1499, image: "assets/storage.jpg", category: "Storage" },
+  { name: "Storage Cabinet", price: 599, image: "assets/storage.jpg", category: "Storage" },
+  { name: "Scandinavian Sideboard", price: 1199, image: "assets/storage.jpg", category: "Storage" },
+  { name: "6-Drawer Dresser", price: 749, image: "assets/storage.jpg", category: "Storage" },
+  { name: "Modern TV Stand", price: 499, image: "assets/storage.jpg", category: "Storage" },
+
+  // Lighting
+  { name: "Pendant Light", price: 199, image: "assets/lighting.jpg", category: "Lighting" },
+  { name: "Floor Lamp", price: 149, image: "assets/lighting.jpg", category: "Lighting" },
+  { name: "Ceramic Table Lamp", price: 65, image: "assets/lighting.jpg", category: "Lighting" },
+  { name: "Modern Wall Sconce", price: 129, image: "assets/lighting.jpg", category: "Lighting" },
+  { name: "Crystal Chandelier", price: 899, image: "assets/lighting.jpg", category: "Lighting" },
+  { name: "Adjustable Desk Lamp", price: 79, image: "assets/lighting.jpg", category: "Lighting" },
+
+  // Decor
+  { name: "Wall Art", price: 89, image: "assets/decor.jpg", category: "Decor" },
+  { name: "Decorative Vase", price: 45, image: "assets/decor.jpg", category: "Decor" },
+  { name: "Velvet Cushion Set", price: 39, image: "assets/decor.jpg", category: "Decor" },
+  { name: "Round Wall Mirror", price: 149, image: "assets/decor.jpg", category: "Decor" },
+  { name: "Geometric Area Rug", price: 299, image: "assets/decor.jpg", category: "Decor" },
+  { name: "Ceramic Plant Pot Set", price: 59, image: "assets/decor.jpg", category: "Decor" }
+];
+
+// Global Variables
 let cart = JSON.parse(localStorage.getItem('nordform_cart')) || [];
 
 // DOM Elements
@@ -6,12 +58,14 @@ const searchBtn = document.getElementById('searchBtn');
 const searchDropdown = document.getElementById('searchDropdown');
 const cartCountElement = document.querySelector('.cart-count');
 
-// Initialize
-document.addEventListener('DOMContentLoaded', () => {
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', function () {
   renderCartDrawer();
   renderQuickViewModal();
   updateCartCount();
   setupEventListeners();
+  updateAuthUI(); // Update navbar based on login status
+  setupSearch(); // Setup search functionality
 
   // Re-attach listeners for dynamic content if needed, 
   // but global delegation is better.
@@ -278,4 +332,121 @@ function setupEventListeners() {
       }
     }
   });
+}
+
+// ============================================
+// SEARCH FUNCTIONALITY
+// ============================================
+
+function setupSearch() {
+  const searchInput = document.getElementById('searchInput');
+  const searchResults = document.getElementById('searchResults');
+  const searchBtn = document.getElementById('searchBtn');
+  const searchDropdown = document.getElementById('searchDropdown');
+
+  if (!searchInput || !searchResults) return;
+
+  // Toggle search dropdown
+  if (searchBtn) {
+    searchBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      searchDropdown.classList.toggle('active');
+      if (searchDropdown.classList.contains('active')) {
+        searchInput.focus();
+      }
+    });
+  }
+
+  // Close dropdown when clicking outside
+  document.addEventListener('click', (e) => {
+    if (searchDropdown && !searchDropdown.contains(e.target) && e.target !== searchBtn) {
+      searchDropdown.classList.remove('active');
+    }
+  });
+
+  // Search as user types
+  searchInput.addEventListener('input', (e) => {
+    const query = e.target.value.trim().toLowerCase();
+
+    if (query.length === 0) {
+      searchResults.innerHTML = '';
+      return;
+    }
+
+    // Filter products
+    const results = allProducts.filter(product =>
+      product.name.toLowerCase().includes(query) ||
+      product.category.toLowerCase().includes(query)
+    ).slice(0, 5); // Limit to 5 results
+
+    // Display results
+    if (results.length === 0) {
+      searchResults.innerHTML = '<div class="search-no-results">No products found</div>';
+    } else {
+      searchResults.innerHTML = results.map(product => `
+        <div class="search-result-item" onclick="addToCart('${product.name}', ${product.price}, '${product.image}')">
+          <img src="${product.image}" alt="${product.name}">
+          <div class="search-result-info">
+            <div class="search-result-name">${product.name}</div>
+            <div class="search-result-meta">
+              <span class="search-result-category">${product.category}</span>
+              <span class="search-result-price">$${product.price}</span>
+            </div>
+          </div>
+          <button class="search-add-btn" title="Add to cart">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+          </button>
+        </div>
+      `).join('');
+    }
+  });
+}
+
+// ============================================
+// AUTHENTICATION UI
+// ============================================
+
+function updateAuthUI() {
+  const authContainer = document.getElementById('authContainer');
+  if (!authContainer) return;
+
+  // Check if auth.js functions are available
+  if (typeof getCurrentUser === 'function' && typeof logout === 'function') {
+    const user = getCurrentUser();
+
+    if (user) {
+      // User is logged in - show user dropdown
+      authContainer.innerHTML = `
+        <div class="user-dropdown">
+          <button class="user-btn">
+            <span>Hi, ${user.name.split(' ')[0]}</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="dropdown-menu">
+            <a href="#">My Orders</a>
+            <a href="#">Profile</a>
+            <a href="#" onclick="logout()">Logout</a>
+          </div>
+        </div>
+      `;
+    } else {
+      // User is not logged in - show login/signup buttons
+      authContainer.innerHTML = `
+        <a href="login.html" class="login-btn">Login</a>
+        <a href="signup.html" class="signup-btn">Sign Up</a>
+      `;
+    }
+  } else {
+    // auth.js not loaded - show login/signup buttons
+    authContainer.innerHTML = `
+      <a href="login.html" class="login-btn">Login</a>
+      <a href="signup.html" class="signup-btn">Sign Up</a>
+    `;
+  }
 }
