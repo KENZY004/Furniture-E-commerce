@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seating - Nordform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo"><a href="home.html" style="color: white; text-decoration: none;">Nordform</a></div>
+
+        <nav class="nav-links">
+            <a href="home.html" class="nav-link">Home</a>
+            <a href="shop.html" class="nav-link">Shop</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="nav-icons">
+            <div class="search-container">
+                <button class="icon-btn search-btn" id="searchBtn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
+                <div class="search-dropdown" id="searchDropdown">
+                    <input type="text" placeholder="Search products..." class="search-input">
+                </div>
+            </div>
+
+            <button class="icon-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+            </button>
+
+            <button class="icon-btn cart-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="9" cy="21" r="1"></circle>
+                    <circle cx="20" cy="21" r="1"></circle>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+                <span class="cart-count">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Category Header -->
+    <section class="category-header">
+        <h1>Seating Collection</h1>
+        <p>Discover our wide range of chairs and seating solutions.</p>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="products-grid">
+            <!-- Product Card 1 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="assets/chair.jpg" alt="Modern Armchair">
+                    <div class="product-overlay">
+                        <button class="quick-view-btn">Quick View</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Modern Armchair</h3>
+                    <p class="product-category">Seating</p>
+                    <div class="product-footer">
+                        <span class="product-price">$899</span>
+                        <button class="add-to-cart-btn" onclick="addToCart('Modern Armchair', 899, 'assets/chair.jpg')">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="assets/chair.jpg" alt="Dining Chair">
+                    <div class="product-overlay">
+                        <button class="quick-view-btn">Quick View</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Dining Chair</h3>
+                    <p class="product-category">Seating</p>
+                    <div class="product-footer">
+                        <span class="product-price">$299</span>
+                        <button class="add-to-cart-btn" onclick="addToCart('Dining Chair', 299, 'assets/chair.jpg')">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 3 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="assets/chair.jpg" alt="Lounge Chair">
+                    <div class="product-overlay">
+                        <button class="quick-view-btn">Quick View</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Lounge Chair</h3>
+                    <p class="product-category">Seating</p>
+                    <div class="product-footer">
+                        <span class="product-price">$1,299</span>
+                        <button class="add-to-cart-btn" onclick="addToCart('Lounge Chair', 1299, 'assets/chair.jpg')">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 4 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="assets/chair.jpg" alt="Office Chair">
+                    <div class="product-overlay">
+                        <button class="quick-view-btn">Quick View</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Ergonomic Office Chair</h3>
+                    <p class="product-category">Seating</p>
+                    <div class="product-footer">
+                        <span class="product-price">$549</span>
+                        <button class="add-to-cart-btn"
+                            onclick="addToCart('Ergonomic Office Chair', 549, 'assets/chair.jpg')">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 5 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="assets/chair.jpg" alt="Accent Chair">
+                    <div class="product-overlay">
+                        <button class="quick-view-btn">Quick View</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Velvet Accent Chair</h3>
+                    <p class="product-category">Seating</p>
+                    <div class="product-footer">
+                        <span class="product-price">$699</span>
+                        <button class="add-to-cart-btn"
+                            onclick="addToCart('Velvet Accent Chair', 699, 'assets/chair.jpg')">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 6 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="assets/chair.jpg" alt="Rocking Chair">
+                    <div class="product-overlay">
+                        <button class="quick-view-btn">Quick View</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Scandinavian Rocking Chair</h3>
+                    <p class="product-category">Seating</p>
+                    <div class="product-footer">
+                        <span class="product-price">$849</span>
+                        <button class="add-to-cart-btn"
+                            onclick="addToCart('Scandinavian Rocking Chair', 849, 'assets/chair.jpg')">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
