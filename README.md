@@ -1,12 +1,20 @@
 # 🛋️ Nordform — Modern Furniture E-Commerce Website
 
 Nordform is a modern, responsive e-commerce website for furniture shopping, inspired by Scandinavian design principles.  
-It provides a smooth shopping experience with authentication, category-based browsing, cart management, and checkout functionality — all built using **vanilla web technologies**.
+This project was developed as a **college mini project** and strictly built using **only HTML, CSS, and JavaScript**, without any external frameworks or libraries.
 
 The project focuses on clean UI, responsive layouts, and client-side data persistence.
 
 ---
 
+## 🎓 Academic Context
+
+- College **Mini Project**
+- Technology constraint: **Only HTML, CSS & JavaScript**
+- No frameworks or libraries used
+- Focus on core web fundamentals
+
+---
 ## ✨ Features
 
 - User authentication (Sign up & Login)
@@ -28,10 +36,6 @@ The project focuses on clean UI, responsive layouts, and client-side data persis
 - HTML5  
 - CSS3 (Flexbox & Grid)  
 - JavaScript (ES6+)
-
-**Storage**
-- LocalStorage
-- SessionStorage
 
 ---
 
