@@ -47,7 +47,7 @@ The project focuses on clean UI, responsive layouts, and client-side data persis
 ---
 
 ## 🏗️ Project Structure
-
+```text
 Furniture-E-commerce/
 ├── home.html # Landing page
 ├── shop.html # Product categories
@@ -66,6 +66,7 @@ Furniture-E-commerce/
 ├── script.js # Core JavaScript logic
 ├── auth.js # Authentication logic
 └── assets/ # Product images
+```
 
 ---
 
