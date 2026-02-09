@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - NordForm</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="auth-page">
+    <div class="auth-container">
+        <!-- Left Side - Branding -->
+        <div class="auth-left">
+            <div class="auth-branding">
+                <h1 class="auth-logo">NordForm</h1>
+                <p class="auth-tagline">Join thousands of satisfied customers</p>
+                <div class="auth-decoration">
+                    <img src="assets/product1.jpg" alt="Furniture">
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side - Signup Form -->
+        <div class="auth-right">
+            <div class="auth-form-container">
+                <h2 class="auth-title">Create Account</h2>
+                <p class="auth-subtitle">Sign up to start your furniture journey</p>
+
+                <form id="signupForm" class="auth-form">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="John Doe" required>
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="At least 6 characters"
+                            required>
+                        <div class="password-strength" id="passwordStrength"></div>
+                        <span class="error-message" id="passwordError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword"
+                            placeholder="Re-enter password" required>
+                        <span class="error-message" id="confirmError"></span>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="agreeTerms" required>
+                            <span>I agree to the <a href="#">Terms & Conditions</a></span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="auth-btn">Create Account</button>
+
+                    <div class="auth-divider">
+                        <span>or</span>
+                    </div>
+
+                    <p class="auth-switch">
+                        Already have an account? <a href="login.html">Login</a>
+                    </p>
+                </form>
+
+                <a href="home.html" class="back-home">← Back to Home</a>
+            </div>
+        </div>
+    </div>
+    <script src="auth.js"></script>
+    <script>redirectIfLoggedIn();</script>
+</body>
+
+</html>
