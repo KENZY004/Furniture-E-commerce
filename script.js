@@ -2,61 +2,43 @@
 // Product Database
 const allProducts = [
   // Soft Seating
-  { name: "Modern Velvet Sofa", price: 1299, image: "assets/product1.jpg", category: "Soft Seating" },
-  { name: "Leather Lounge Sofa", price: 1599, image: "assets/product2.jpg", category: "Soft Seating" },
-  { name: "L-Shape Sectional", price: 2199, image: "assets/product3.jpg", category: "Soft Seating" },
-  { name: "Chesterfield Sofa", price: 1899, image: "assets/soft_seating.jpg", category: "Soft Seating" },
-  { name: "Mid-Century Modern Sofa", price: 1449, image: "assets/product1.jpg", category: "Soft Seating" },
-  { name: "Modular Sofa System", price: 2499, image: "assets/product2.jpg", category: "Soft Seating" },
+  { name: "Modern Velvet Sofa", price: 1299, image: "assets/modern_velvet_sofa.jpg", category: "Soft Seating" },
+  { name: "Leather Lounge Sofa", price: 1599, image: "assets/Leather_Lounge_Sofa.png", category: "Soft Seating" },
+  { name: "L-Shape Sectional", price: 2199, image: "assets/L-Shape_Sectional.jpg", category: "Soft Seating" },
+  { name: "Chesterfield Sofa", price: 1899, image: "assets/Chesterfield Sofa.jpg", category: "Soft Seating" },
+  { name: "Mid-Century Modern Sofa", price: 1449, image: "assets/Mid-Century_Modern_Sofa.jpg", category: "Soft Seating" },
+  { name: "Modular Sofa System", price: 2499, image: "assets/Modular_Sofa_System.jpg", category: "Soft Seating" },
 
   // Seating
-  { name: "Modern Armchair", price: 899, image: "assets/chair.jpg", category: "Seating" },
-  { name: "Dining Chair", price: 299, image: "assets/chair.jpg", category: "Seating" },
-  { name: "Lounge Chair", price: 1299, image: "assets/chair.jpg", category: "Seating" },
-  { name: "Ergonomic Office Chair", price: 549, image: "assets/chair.jpg", category: "Seating" },
-  { name: "Velvet Accent Chair", price: 699, image: "assets/chair.jpg", category: "Seating" },
-  { name: "Scandinavian Rocking Chair", price: 849, image: "assets/chair.jpg", category: "Seating" },
+  { name: "Modern Armchair", price: 899, image: "assets/Modern_Armchair.jpg", category: "Seating" },
+  { name: "Dining Chair", price: 299, image: "assets/Dining_Chair.jpg", category: "Seating" },
+  { name: "Lounge Chair", price: 1299, image: "assets/Lounge_Chair.png", category: "Seating" },
+  { name: "Ergonomic Office Chair", price: 549, image: "assets/Ergonomic_Office_Chair.jpg", category: "Seating" },
+  { name: "Velvet Accent Chair", price: 699, image: "assets/Velvet_Accent_Chair.jpg", category: "Seating" },
+  { name: "Scandinavian Rocking Chair", price: 849, image: "assets/Scandinavian_Rocking_Chair.png", category: "Seating" },
 
   // Tables
-  { name: "Dining Table", price: 1299, image: "assets/table.jpg", category: "Tables" },
-  { name: "Coffee Table", price: 499, image: "assets/table.jpg", category: "Tables" },
-  { name: "Round Side Table", price: 249, image: "assets/table.jpg", category: "Tables" },
-  { name: "Console Table", price: 699, image: "assets/table.jpg", category: "Tables" },
-  { name: "Modern Writing Desk", price: 899, image: "assets/table.jpg", category: "Tables" },
-  { name: "Nesting Tables Set", price: 399, image: "assets/table.jpg", category: "Tables" },
+  { name: "Dining Table", price: 1299, image: "assets/Solid_Wood_Dining_Table.jpg", category: "Tables" },
+  { name: "Coffee Table", price: 499, image: "assets/Minimalist_Coffee_Table.jpg", category: "Tables" },
 
   // Storage
-  { name: "Bookshelf", price: 799, image: "assets/storage.jpg", category: "Storage" },
-  { name: "Wardrobe", price: 1499, image: "assets/storage.jpg", category: "Storage" },
-  { name: "Storage Cabinet", price: 599, image: "assets/storage.jpg", category: "Storage" },
-  { name: "Scandinavian Sideboard", price: 1199, image: "assets/storage.jpg", category: "Storage" },
-  { name: "6-Drawer Dresser", price: 749, image: "assets/storage.jpg", category: "Storage" },
-  { name: "Modern TV Stand", price: 499, image: "assets/storage.jpg", category: "Storage" },
+  { name: "Bookshelf", price: 799, image: "assets/Minimalist_Bookshelf.jpg", category: "Storage" },
+  { name: "Wardrobe", price: 1499, image: "assets/Modern_Wardrobe.jpg", category: "Storage" },
+  { name: "Storage Cabinet", price: 599, image: "assets/Storage_Cabinet.jpg", category: "Storage" },
 
   // Lighting
-  { name: "Pendant Light", price: 199, image: "assets/lighting.jpg", category: "Lighting" },
-  { name: "Floor Lamp", price: 149, image: "assets/lighting.jpg", category: "Lighting" },
-  { name: "Ceramic Table Lamp", price: 65, image: "assets/lighting.jpg", category: "Lighting" },
-  { name: "Modern Wall Sconce", price: 129, image: "assets/lighting.jpg", category: "Lighting" },
-  { name: "Crystal Chandelier", price: 899, image: "assets/lighting.jpg", category: "Lighting" },
-  { name: "Adjustable Desk Lamp", price: 79, image: "assets/lighting.jpg", category: "Lighting" },
+  { name: "Pendant Light", price: 199, image: "assets/Nordic_Pendant_Light.jpg", category: "Lighting" },
+  { name: "Floor Lamp", price: 149, image: "assets/Modern_Floor_Lamp.jpg", category: "Lighting" },
+  { name: "Ceramic Table Lamp", price: 65, image: "assets/Ceramic_Table_Lamp.png", category: "Lighting" },
 
   // Decor
-  { name: "Wall Art", price: 89, image: "assets/decor.jpg", category: "Decor" },
-  { name: "Decorative Vase", price: 45, image: "assets/decor.jpg", category: "Decor" },
-  { name: "Velvet Cushion Set", price: 39, image: "assets/decor.jpg", category: "Decor" },
-  { name: "Round Wall Mirror", price: 149, image: "assets/decor.jpg", category: "Decor" },
-  { name: "Geometric Area Rug", price: 299, image: "assets/decor.jpg", category: "Decor" },
-  { name: "Ceramic Plant Pot Set", price: 59, image: "assets/decor.jpg", category: "Decor" }
+  { name: "Wall Art", price: 89, image: "assets/Abstract_Wall_Art.jpg", category: "Decor" },
+  { name: "Decorative Vase", price: 45, image: "assets/Minimalist Vase.jpg", category: "Decor" },
+  { name: "Velvet Cushion Set", price: 39, image: "assets/Velvet_Cushion_Set.jpg", category: "Decor" }
 ];
 
 // Global Variables
 let cart = JSON.parse(localStorage.getItem('nordform_cart')) || [];
-
-// DOM Elements
-const searchBtn = document.getElementById('searchBtn');
-const searchDropdown = document.getElementById('searchDropdown');
-const cartCountElement = document.querySelector('.cart-count');
 
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', function () {
@@ -64,35 +46,18 @@ document.addEventListener('DOMContentLoaded', function () {
   renderQuickViewModal();
   updateCartCount();
   setupEventListeners();
-  updateAuthUI(); // Update navbar based on login status
-  setupSearch(); // Setup search functionality
-
-  // Re-attach listeners for dynamic content if needed, 
-  // but global delegation is better.
-});
-
-// Search Toggle
-searchBtn.addEventListener('click', (e) => {
-  e.stopPropagation();
-  searchDropdown.classList.toggle('active');
-});
-
-document.addEventListener('click', (e) => {
-  if (searchDropdown && !searchDropdown.contains(e.target) && e.target !== searchBtn) {
-    searchDropdown.classList.remove('active');
-  }
+  updateAuthUI();
+  setupSearch();
+  setupUserDropdown();
 });
 
 // Cart Functions
 function addToCart(name, price, image = 'assets/product1.jpg') {
-  // Check if item already exists in cart
   const existingItemIndex = cart.findIndex(item => item.name === name);
 
   if (existingItemIndex > -1) {
-    // Item exists, increase quantity
     cart[existingItemIndex].quantity = (cart[existingItemIndex].quantity || 1) + 1;
   } else {
-    // New item, add to cart with quantity 1
     const product = { name, price, image, quantity: 1 };
     cart.push(product);
   }
@@ -101,7 +66,6 @@ function addToCart(name, price, image = 'assets/product1.jpg') {
   updateCartCount();
   renderCartItems();
 
-  // Open cart drawer
   const drawer = document.querySelector('.cart-drawer');
   const overlay = document.querySelector('.cart-overlay');
   if (drawer && overlay) {
@@ -133,6 +97,7 @@ function saveCart() {
 }
 
 function updateCartCount() {
+  const cartCountElement = document.querySelector('.cart-count');
   if (cartCountElement) {
     const totalItems = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
     cartCountElement.textContent = totalItems;
@@ -219,7 +184,7 @@ function checkout() {
     showNotification("Your cart is empty!");
     return;
   }
-  showNotification("Proceeding to Checkout...");
+  window.location.href = 'checkout.html';
 }
 
 // Quick View Functions
@@ -257,14 +222,12 @@ function renderQuickViewModal() {
 
 function openQuickView(name, price, image, category = 'Furniture') {
   const modal = document.querySelector('.modal-overlay');
-  const modalContent = document.querySelector('.modal-content');
 
   document.getElementById('qvTitle').textContent = name;
   document.getElementById('qvPrice').textContent = '$' + price;
   document.getElementById('qvImage').src = image;
   document.getElementById('qvCategory').textContent = category;
 
-  // Update Add Button
   const btn = document.getElementById('qvAddBtn');
   btn.onclick = () => {
     addToCart(name, price, image);
@@ -301,7 +264,7 @@ function setupEventListeners() {
   const cartBtn = document.querySelector('.cart-btn');
   if (cartBtn) {
     cartBtn.addEventListener('click', (e) => {
-      e.preventDefault(); // Prevent default link behavior if it's an anchor
+      e.preventDefault();
       openCart();
     });
   }
@@ -309,16 +272,20 @@ function setupEventListeners() {
   // Navbar Scroll
   window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-      navbar.style.background = 'rgba(0, 0, 0, 0.9)';
-      navbar.style.backdropFilter = 'blur(10px)';
-    } else {
-      navbar.style.background = 'linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 100%)';
-      navbar.style.backdropFilter = 'none';
+    if (navbar && !navbar.classList.contains('navbar-dark')) {
+      if (window.scrollY > 50) {
+        navbar.style.background = 'rgba(0, 0, 0, 0.95)';
+        navbar.style.backdropFilter = 'blur(10px)';
+        navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+      } else {
+        navbar.style.background = 'linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%)';
+        navbar.style.backdropFilter = 'none';
+        navbar.style.boxShadow = 'none';
+      }
     }
   });
 
-  // Attach Quick View Listeners using Delegation
+  // Quick View Listeners using Delegation
   document.body.addEventListener('click', (e) => {
     if (e.target.classList.contains('quick-view-btn')) {
       const card = e.target.closest('.product-card');
@@ -332,34 +299,40 @@ function setupEventListeners() {
       }
     }
   });
+
+  // Mobile menu close on link click
+  const navLinks = document.querySelectorAll('.nav-link');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      const nav = document.querySelector('.nav-links');
+      if (nav && nav.classList.contains('active')) {
+        nav.classList.remove('active');
+      }
+    });
+  });
 }
 
-// ============================================
-// SEARCH FUNCTIONALITY
-// ============================================
-
+// Search Functionality
 function setupSearch() {
   const searchInput = document.getElementById('searchInput');
   const searchResults = document.getElementById('searchResults');
   const searchBtn = document.getElementById('searchBtn');
   const searchDropdown = document.getElementById('searchDropdown');
 
-  if (!searchInput || !searchResults) return;
+  if (!searchInput || !searchResults || !searchBtn || !searchDropdown) return;
 
   // Toggle search dropdown
-  if (searchBtn) {
-    searchBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      searchDropdown.classList.toggle('active');
-      if (searchDropdown.classList.contains('active')) {
-        searchInput.focus();
-      }
-    });
-  }
+  searchBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    searchDropdown.classList.toggle('active');
+    if (searchDropdown.classList.contains('active')) {
+      searchInput.focus();
+    }
+  });
 
   // Close dropdown when clicking outside
   document.addEventListener('click', (e) => {
-    if (searchDropdown && !searchDropdown.contains(e.target) && e.target !== searchBtn) {
+    if (!searchDropdown.contains(e.target) && e.target !== searchBtn) {
       searchDropdown.classList.remove('active');
     }
   });
@@ -373,13 +346,11 @@ function setupSearch() {
       return;
     }
 
-    // Filter products
     const results = allProducts.filter(product =>
       product.name.toLowerCase().includes(query) ||
       product.category.toLowerCase().includes(query)
-    ).slice(0, 5); // Limit to 5 results
+    ).slice(0, 5);
 
-    // Display results
     if (results.length === 0) {
       searchResults.innerHTML = '<div class="search-no-results">No products found</div>';
     } else {
@@ -406,20 +377,15 @@ function setupSearch() {
   });
 }
 
-// ============================================
-// AUTHENTICATION UI
-// ============================================
-
+// Authentication UI
 function updateAuthUI() {
   const authContainer = document.getElementById('authContainer');
   if (!authContainer) return;
 
-  // Check if auth.js functions are available
   if (typeof getCurrentUser === 'function' && typeof logout === 'function') {
     const user = getCurrentUser();
 
     if (user) {
-      // User is logged in - show user dropdown
       authContainer.innerHTML = `
         <div class="user-dropdown">
           <button class="user-btn">
@@ -429,24 +395,222 @@ function updateAuthUI() {
             </svg>
           </button>
           <div class="dropdown-menu">
-            <a href="#">My Orders</a>
-            <a href="#">Profile</a>
-            <a href="#" onclick="logout()">Logout</a>
+            <a href="#" onclick="event.preventDefault(); showOrdersModal();">My Orders</a>
+            <a href="#" onclick="event.preventDefault(); showProfileModal();">Profile</a>
+            <a href="#" onclick="event.preventDefault(); logout();">Logout</a>
           </div>
         </div>
       `;
     } else {
-      // User is not logged in - show login/signup buttons
       authContainer.innerHTML = `
         <a href="login.html" class="login-btn">Login</a>
         <a href="signup.html" class="signup-btn">Sign Up</a>
       `;
     }
   } else {
-    // auth.js not loaded - show login/signup buttons
     authContainer.innerHTML = `
       <a href="login.html" class="login-btn">Login</a>
       <a href="signup.html" class="signup-btn">Sign Up</a>
     `;
+  }
+}
+
+// User Dropdown Setup
+function setupUserDropdown() {
+  setTimeout(() => {
+    const userBtn = document.querySelector('.user-btn');
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+
+    if (userBtn && dropdownMenu) {
+      userBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dropdownMenu.classList.toggle('show');
+      });
+
+      document.addEventListener('click', () => {
+        if (dropdownMenu.classList.contains('show')) {
+          dropdownMenu.classList.remove('show');
+        }
+      });
+    }
+  }, 100);
+}
+
+// Listen for storage changes
+window.addEventListener('storage', (e) => {
+  if (e.key === 'currentUser' || e.key === 'sessionUser') {
+    updateAuthUI();
+    setupUserDropdown();
+  }
+});
+
+// Profile & Orders Modal Functions
+function showProfileModal() {
+  const user = getCurrentUser();
+  if (!user) {
+    alert("Please log in to view your profile");
+    return;
+  }
+
+  const modal = document.createElement("div");
+  modal.className = "modal-overlay";
+  modal.id = "profileModal";
+  modal.innerHTML = `
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>My Profile</h2>
+        <button class="modal-close" onclick="closeModal('profileModal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="profile-info">
+          <div class="profile-field">
+            <label>Full Name</label>
+            <div class="value">${user.name}</div>
+          </div>
+          <div class="profile-field">
+            <label>Email Address</label>
+            <div class="value">${user.email}</div>
+          </div>
+          <div class="profile-field">
+            <label>Member Since</label>
+            <div class="value">${new Date(user.createdAt).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}</div>
+          </div>
+          <div class="profile-field">
+            <label>Account ID</label>
+            <div class="value">${user.id}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+
+  document.body.appendChild(modal);
+  setTimeout(() => modal.classList.add("show"), 10);
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      closeModal("profileModal");
+    }
+  });
+}
+
+function showOrdersModal() {
+  const user = getCurrentUser();
+  if (!user) {
+    alert("Please log in to view your orders");
+    return;
+  }
+
+  let orders = JSON.parse(localStorage.getItem("userOrders_" + user.id) || "[]");
+
+  if (orders.length === 0) {
+    orders = [
+      {
+        id: "ORD-" + Math.random().toString(36).substr(2, 9).toUpperCase(),
+        date: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString(),
+        status: "delivered",
+        items: [
+          { name: "Modern Armchair", quantity: 1, price: 899 },
+          { name: "Coffee Table", quantity: 1, price: 499 }
+        ],
+        total: 1398
+      },
+      {
+        id: "ORD-" + Math.random().toString(36).substr(2, 9).toUpperCase(),
+        date: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString(),
+        status: "shipped",
+        items: [
+          { name: "Floor Lamp", quantity: 2, price: 149 }
+        ],
+        total: 298
+      },
+      {
+        id: "ORD-" + Math.random().toString(36).substr(2, 9).toUpperCase(),
+        date: new Date().toISOString(),
+        status: "processing",
+        items: [
+          { name: "Velvet Accent Chair", quantity: 1, price: 699 },
+          { name: "Wall Art", quantity: 3, price: 89 }
+        ],
+        total: 966
+      }
+    ];
+    localStorage.setItem("userOrders_" + user.id, JSON.stringify(orders));
+  }
+
+  const ordersHTML = orders.length > 0 ? orders.map(order => `
+    <div class="order-card">
+      <div class="order-header">
+        <div class="order-id">Order #${order.id}</div>
+        <div class="order-status ${order.status}">${order.status}</div>
+      </div>
+      <div class="order-items">
+        ${order.items.map(item => `
+          <div class="order-item">
+            <span>${item.quantity}x ${item.name}</span>
+            <span>$${item.price * item.quantity}</span>
+          </div>
+        `).join("")}
+      </div>
+      <div class="order-total">
+        <span>Total</span>
+        <span>$${order.total}</span>
+      </div>
+      <div style="margin-top: 10px; font-size: 12px; color: #999;">
+        Ordered on ${new Date(order.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+      </div>
+    </div>
+  `).join("") : `
+    <div class="empty-state">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="9" cy="21" r="1"></circle>
+        <circle cx="20" cy="21" r="1"></circle>
+        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+      </svg>
+      <h3>No Orders Yet</h3>
+      <p>Start shopping to see your orders here!</p>
+    </div>
+  `;
+
+  const modal = document.createElement("div");
+  modal.className = "modal-overlay";
+  modal.id = "ordersModal";
+  modal.innerHTML = `
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>My Orders</h2>
+        <button class="modal-close" onclick="closeModal('ordersModal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="orders-list">
+          ${ordersHTML}
+        </div>
+      </div>
+    </div>
+  `;
+
+  document.body.appendChild(modal);
+  setTimeout(() => modal.classList.add("show"), 10);
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      closeModal("ordersModal");
+    }
+  });
+}
+
+function closeModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (modal) {
+    modal.classList.remove("show");
+    setTimeout(() => modal.remove(), 300);
+  }
+}
+
+// Mobile Menu Toggle
+function toggleMobileMenu() {
+  const navLinks = document.querySelector('.nav-links');
+  if (navLinks) {
+    navLinks.classList.toggle('active');
   }
 }

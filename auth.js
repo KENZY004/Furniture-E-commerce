@@ -1,5 +1,4 @@
 // Authentication System for NordForm E-commerce
-// Uses localStorage for demo purposes (NOT production-ready)
 
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', function () {
@@ -21,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-// ============ SIGNUP FUNCTIONS ============
+// Signup Functions
 
 function handleSignup(e) {
     e.preventDefault();
@@ -89,9 +88,10 @@ function handleSignup(e) {
     // Auto-login
     setCurrentUser(newUser);
 
-    // Show success and redirect
-    alert('Account created successfully! Welcome to NordForm.');
-    window.location.href = 'home.html';
+    // Redirect to the page they originally tried to access, or shop page
+    const redirectTo = sessionStorage.getItem('nordform_redirect_after_login') || 'shop.html';
+    sessionStorage.removeItem('nordform_redirect_after_login');
+    window.location.href = redirectTo;
 }
 
 function updatePasswordStrength() {
@@ -117,7 +117,7 @@ function updatePasswordStrength() {
     strengthDiv.innerHTML = `<span style="color: ${colors[level]}">Strength: ${levels[level]}</span>`;
 }
 
-// ============ LOGIN FUNCTIONS ============
+// Login Functions
 
 function handleLogin(e) {
     e.preventDefault();
@@ -157,12 +157,31 @@ function handleLogin(e) {
     // Set current user
     setCurrentUser(user, rememberMe);
 
-    // Redirect to home
-    alert('Login successful! Welcome back, ' + user.name);
-    window.location.href = 'home.html';
+    // Redirect to the page they originally tried to access, or shop page
+    const redirectTo = sessionStorage.getItem('nordform_redirect_after_login') || 'shop.html';
+    sessionStorage.removeItem('nordform_redirect_after_login');
+    window.location.href = redirectTo;
 }
 
-// ============ HELPER FUNCTIONS ============
+// Page Protection Functions
+
+// Redirect to login if NOT logged in (for protected pages)
+function requireAuth() {
+    if (!isLoggedIn()) {
+        // Save the page they tried to access
+        sessionStorage.setItem('nordform_redirect_after_login', window.location.pathname);
+        window.location.href = 'login.html';
+    }
+}
+
+// Redirect to shop if already logged in (for auth pages)
+function redirectIfLoggedIn() {
+    if (isLoggedIn()) {
+        window.location.href = 'shop.html';
+    }
+}
+
+// Helper Functions
 
 function getUsers() {
     const users = localStorage.getItem('nordform_users');
@@ -206,8 +225,7 @@ function isValidEmail(email) {
 }
 
 function simpleHash(str) {
-    // Simple hash function for demo purposes only
-    // NOT secure for production use
+    // Simple hash function for client-side use
     let hash = 0;
     for (let i = 0; i < str.length; i++) {
         const char = str.charCodeAt(i);
