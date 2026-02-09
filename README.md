@@ -1,20 +1,22 @@
 # 🛋️ Nordform — Modern Furniture E-Commerce Website
 
-Nordform is a modern, responsive e-commerce website for furniture shopping, inspired by Scandinavian design principles.  
+Nordform is a modern, responsive **furniture e-commerce website clone**, inspired by Scandinavian design principles.  
 This project was developed as a **college mini project** and strictly built using **only HTML, CSS, and JavaScript**, without any external frameworks or libraries.
 
-The project focuses on clean UI, responsive layouts, and client-side data persistence.
+The goal of the project was to **clone the core functionality and UI patterns of a real-world e-commerce website** while applying original styling and structure.
 
 ---
 
 ## 🎓 Academic Context
 
 - College **Mini Project**
+- Objective: **Clone an e-commerce website**
 - Technology constraint: **Only HTML, CSS & JavaScript**
-- No frameworks or libraries used
-- Focus on core web fundamentals
+- No frameworks, libraries, or backend services used
+- Focus on understanding real-world e-commerce flows
 
 ---
+
 ## ✨ Features
 
 - User authentication (Sign up & Login)
